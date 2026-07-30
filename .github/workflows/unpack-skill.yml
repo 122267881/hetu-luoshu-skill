@@ -1,6 +1,8 @@
 name: Publish verified skill source
 
 on:
+  issues:
+    types: [opened]
   schedule:
     - cron: '*/5 * * * *'
   workflow_dispatch:
