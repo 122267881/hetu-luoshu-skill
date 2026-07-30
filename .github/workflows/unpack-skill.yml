@@ -1,0 +1,41 @@
+name: Unpack skill bundle
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.skill-bundle/**'
+      - '.github/workflows/unpack-skill.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode and unpack skill
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .skill-bundle/part-* | base64 --decode > /tmp/hetu-luoshu-skill.zip
+          rm -rf /tmp/hetu-luoshu-unpacked
+          mkdir -p /tmp/hetu-luoshu-unpacked
+          unzip -q /tmp/hetu-luoshu-skill.zip -d /tmp/hetu-luoshu-unpacked
+          source_dir="$(find /tmp/hetu-luoshu-unpacked -mindepth 1 -maxdepth 1 -type d | head -n 1)"
+          test -n "$source_dir"
+          cp -a "$source_dir"/. ./
+          rm -rf .skill-bundle
+          rm -f .github/workflows/unpack-skill.yml
+      - name: Verify skill
+        run: python3 scripts/run_checks.py
+      - name: Commit unpacked skill
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "feat: publish hetu luoshu skill 3.0.0"
+          git push
