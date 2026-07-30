@@ -1,24 +1,23 @@
-name: Unpack skill bundle
+name: Publish verified skill source
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.skill-bundle/READY'
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  unpack:
+  publish:
+    if: ${{ hashFiles('.skill-bundle/READY') != '' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Decode, verify and unpack skill
+      - name: Decode and verify bundle
         shell: bash
         run: |
           set -euo pipefail
-          test -f .skill-bundle/READY
           cat .skill-bundle/chunk-* | base64 --decode > /tmp/hetu-luoshu-skill.tar.xz
           echo "8a4214e780120df2ebe9f619565582b525c5f99285a63e96e7780261cea0e9dc  /tmp/hetu-luoshu-skill.tar.xz" | sha256sum --check --strict
           rm -rf /tmp/hetu-luoshu-unpacked
@@ -26,12 +25,11 @@ jobs:
           tar -xJf /tmp/hetu-luoshu-skill.tar.xz -C /tmp/hetu-luoshu-unpacked
           source_dir="$(find /tmp/hetu-luoshu-unpacked -mindepth 1 -maxdepth 1 -type d | head -n 1)"
           test -n "$source_dir"
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
           cp -a "$source_dir"/. ./
-          rm -rf .skill-bundle
-          rm -f .github/workflows/unpack-skill.yml
       - name: Verify skill
         run: python3 scripts/run_checks.py
-      - name: Commit unpacked skill
+      - name: Commit source-only repository
         shell: bash
         run: |
           set -euo pipefail
