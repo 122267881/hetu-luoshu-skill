@@ -4,8 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - '.skill-bundle/**'
-      - '.github/workflows/unpack-skill.yml'
+      - '.skill-bundle/READY'
 
 permissions:
   contents: write
@@ -19,6 +18,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          test -f .skill-bundle/READY
           cat .skill-bundle/part-* | base64 --decode > /tmp/hetu-luoshu-skill.zip
           rm -rf /tmp/hetu-luoshu-unpacked
           mkdir -p /tmp/hetu-luoshu-unpacked
