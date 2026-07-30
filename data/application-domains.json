@@ -1,0 +1,572 @@
+{
+  "schema_version": 1,
+  "skill_version": "3.0.0",
+  "evidence_label": "A",
+  "note": "这些领域适配器是现代问题解决框架，不声称是古代河图洛书的固定原义。",
+  "domains": [
+    {
+      "id": "personal-decision",
+      "name": "个人选择与人生规划",
+      "triggers": [
+        "选择",
+        "纠结",
+        "决定",
+        "人生",
+        "目标",
+        "习惯",
+        "时间管理",
+        "优先级"
+      ],
+      "problem_types": [
+        "clarify",
+        "decide",
+        "plan",
+        "optimize"
+      ],
+      "required_inputs": [
+        "goal",
+        "context",
+        "constraints"
+      ],
+      "outputs": [
+        "decision frame",
+        "next action",
+        "review date"
+      ],
+      "boundaries": [
+        "不替代心理治疗或危机干预"
+      ]
+    },
+    {
+      "id": "relationship-communication",
+      "name": "关系与沟通",
+      "triggers": [
+        "关系",
+        "沟通",
+        "伴侣",
+        "朋友",
+        "同事冲突",
+        "谈判",
+        "误会",
+        "表达"
+      ],
+      "problem_types": [
+        "diagnose",
+        "decide",
+        "plan",
+        "recover"
+      ],
+      "required_inputs": [
+        "goal",
+        "stakeholders",
+        "context"
+      ],
+      "outputs": [
+        "stakeholder map",
+        "communication plan",
+        "boundary statement"
+      ],
+      "boundaries": [
+        "不替代暴力风险处置或法律保护"
+      ]
+    },
+    {
+      "id": "learning-research",
+      "name": "学习与研究",
+      "triggers": [
+        "学习",
+        "研究",
+        "课程",
+        "读书",
+        "考试",
+        "论文",
+        "知识",
+        "资料"
+      ],
+      "problem_types": [
+        "clarify",
+        "design",
+        "plan",
+        "execute",
+        "learn"
+      ],
+      "required_inputs": [
+        "goal",
+        "resources",
+        "deadline"
+      ],
+      "outputs": [
+        "knowledge map",
+        "learning loop",
+        "evidence plan"
+      ],
+      "boundaries": [
+        "学术事实仍需可靠来源"
+      ]
+    },
+    {
+      "id": "career-work",
+      "name": "职业与工作",
+      "triggers": [
+        "职业",
+        "工作",
+        "求职",
+        "简历",
+        "岗位",
+        "升职",
+        "转行",
+        "绩效"
+      ],
+      "problem_types": [
+        "clarify",
+        "decide",
+        "plan",
+        "optimize"
+      ],
+      "required_inputs": [
+        "goal",
+        "context",
+        "constraints"
+      ],
+      "outputs": [
+        "career options",
+        "gap map",
+        "action plan"
+      ],
+      "boundaries": [
+        "不保证录用、晋升或收入结果"
+      ]
+    },
+    {
+      "id": "project-delivery",
+      "name": "项目交付",
+      "triggers": [
+        "项目",
+        "交付",
+        "里程碑",
+        "进度",
+        "延期",
+        "任务",
+        "上线",
+        "实施"
+      ],
+      "problem_types": [
+        "design",
+        "plan",
+        "execute",
+        "optimize",
+        "recover"
+      ],
+      "required_inputs": [
+        "goal",
+        "deadline",
+        "resources",
+        "stakeholders"
+      ],
+      "outputs": [
+        "work breakdown",
+        "owners",
+        "milestones",
+        "risk register"
+      ],
+      "boundaries": [
+        "涉及生产系统时需真实环境验证"
+      ]
+    },
+    {
+      "id": "product-innovation",
+      "name": "产品与创新",
+      "triggers": [
+        "产品",
+        "功能",
+        "用户",
+        "原型",
+        "需求",
+        "SaaS",
+        "收费",
+        "定价",
+        "上线计划",
+        "客户价值"
+      ],
+      "problem_types": [
+        "clarify",
+        "diagnose",
+        "decide",
+        "design",
+        "plan",
+        "optimize"
+      ],
+      "required_inputs": [
+        "goal",
+        "users",
+        "constraints"
+      ],
+      "outputs": [
+        "problem statement",
+        "MVP scope",
+        "validation experiment",
+        "roadmap"
+      ],
+      "boundaries": [
+        "不把象数映射当市场证据"
+      ]
+    },
+    {
+      "id": "business-strategy",
+      "name": "商业与战略",
+      "triggers": [
+        "商业",
+        "战略",
+        "变现",
+        "客户",
+        "收入",
+        "竞争",
+        "市场",
+        "模式",
+        "收费服务"
+      ],
+      "problem_types": [
+        "diagnose",
+        "decide",
+        "design",
+        "plan",
+        "optimize",
+        "govern"
+      ],
+      "required_inputs": [
+        "goal",
+        "context",
+        "resources",
+        "constraints"
+      ],
+      "outputs": [
+        "strategic choices",
+        "tradeoffs",
+        "execution plan",
+        "metrics"
+      ],
+      "boundaries": [
+        "不保证商业成功或投资回报"
+      ]
+    },
+    {
+      "id": "organization-management",
+      "name": "组织与管理",
+      "triggers": [
+        "组织",
+        "团队",
+        "员工",
+        "岗位",
+        "职责",
+        "管理",
+        "协作",
+        "审批",
+        "会议"
+      ],
+      "problem_types": [
+        "diagnose",
+        "design",
+        "plan",
+        "execute",
+        "optimize",
+        "govern"
+      ],
+      "required_inputs": [
+        "goal",
+        "stakeholders",
+        "constraints"
+      ],
+      "outputs": [
+        "operating model",
+        "roles",
+        "cadence",
+        "escalation path"
+      ],
+      "boundaries": [
+        "劳动法律问题需专业审查"
+      ]
+    },
+    {
+      "id": "content-marketing",
+      "name": "内容与营销",
+      "triggers": [
+        "内容",
+        "营销",
+        "推广",
+        "品牌",
+        "视频",
+        "推文",
+        "公众号",
+        "获客",
+        "转化"
+      ],
+      "problem_types": [
+        "clarify",
+        "design",
+        "plan",
+        "execute",
+        "optimize",
+        "learn"
+      ],
+      "required_inputs": [
+        "goal",
+        "audience",
+        "channel"
+      ],
+      "outputs": [
+        "message hierarchy",
+        "content plan",
+        "experiment metrics"
+      ],
+      "boundaries": [
+        "不得制造虚假功效或误导性承诺"
+      ]
+    },
+    {
+      "id": "knowledge-ai-systems",
+      "name": "知识库、AI与自动化系统",
+      "triggers": [
+        "AI",
+        "智能体",
+        "Agent",
+        "知识库",
+        "工作流",
+        "自动化",
+        "Dify",
+        "n8n",
+        "Codex",
+        "模型"
+      ],
+      "problem_types": [
+        "diagnose",
+        "decide",
+        "design",
+        "plan",
+        "execute",
+        "optimize",
+        "govern"
+      ],
+      "required_inputs": [
+        "goal",
+        "systems",
+        "constraints"
+      ],
+      "outputs": [
+        "architecture",
+        "routing",
+        "data flow",
+        "safety gates",
+        "test plan"
+      ],
+      "boundaries": [
+        "密钥、权限和生产部署必须独立审计"
+      ]
+    },
+    {
+      "id": "troubleshooting-incident",
+      "name": "故障排查与事件恢复",
+      "triggers": [
+        "故障",
+        "报错",
+        "失败",
+        "异常",
+        "宕机",
+        "漏洞",
+        "风险",
+        "排查",
+        "修复"
+      ],
+      "problem_types": [
+        "diagnose",
+        "recover",
+        "execute",
+        "learn",
+        "govern"
+      ],
+      "required_inputs": [
+        "observed_result",
+        "expected_result",
+        "evidence"
+      ],
+      "outputs": [
+        "hypotheses",
+        "isolation steps",
+        "recovery plan",
+        "postmortem"
+      ],
+      "boundaries": [
+        "安全事件不得执行未经授权的攻击操作"
+      ]
+    },
+    {
+      "id": "wellbeing-routine",
+      "name": "日常状态与非医疗习惯",
+      "triggers": [
+        "睡眠习惯",
+        "作息",
+        "压力管理",
+        "精力",
+        "运动计划",
+        "饮食习惯",
+        "专注"
+      ],
+      "problem_types": [
+        "clarify",
+        "plan",
+        "execute",
+        "optimize",
+        "learn"
+      ],
+      "required_inputs": [
+        "goal",
+        "context",
+        "constraints"
+      ],
+      "outputs": [
+        "routine experiment",
+        "tracking metrics",
+        "review cadence"
+      ],
+      "boundaries": [
+        "症状、疾病、用药和危机必须专业接管"
+      ]
+    },
+    {
+      "id": "finance-resource-planning",
+      "name": "预算、现金流与资源规划",
+      "triggers": [
+        "预算",
+        "现金流",
+        "成本",
+        "支出",
+        "资源分配",
+        "储蓄",
+        "债务计划",
+        "财务规划"
+      ],
+      "problem_types": [
+        "diagnose",
+        "decide",
+        "plan",
+        "optimize",
+        "govern"
+      ],
+      "required_inputs": [
+        "goal",
+        "resources",
+        "constraints"
+      ],
+      "outputs": [
+        "resource map",
+        "scenario plan",
+        "risk limits",
+        "review cadence"
+      ],
+      "boundaries": [
+        "不预测价格，不生成买卖信号；个性化金融决策需真实数据和合格建议"
+      ]
+    },
+    {
+      "id": "governance-risk",
+      "name": "治理、合规与风险",
+      "triggers": [
+        "治理",
+        "合规",
+        "权限",
+        "安全",
+        "审计",
+        "政策",
+        "风险控制",
+        "责任"
+      ],
+      "problem_types": [
+        "diagnose",
+        "design",
+        "plan",
+        "execute",
+        "govern"
+      ],
+      "required_inputs": [
+        "goal",
+        "stakeholders",
+        "constraints",
+        "evidence"
+      ],
+      "outputs": [
+        "risk register",
+        "controls",
+        "owners",
+        "monitoring plan"
+      ],
+      "boundaries": [
+        "法律结论需合格法律专业人员"
+      ]
+    },
+    {
+      "id": "creative-design",
+      "name": "创意与设计",
+      "triggers": [
+        "创意",
+        "设计",
+        "视觉",
+        "品牌名",
+        "故事",
+        "脚本",
+        "方案",
+        "概念"
+      ],
+      "problem_types": [
+        "clarify",
+        "design",
+        "decide",
+        "execute",
+        "learn"
+      ],
+      "required_inputs": [
+        "goal",
+        "audience",
+        "constraints"
+      ],
+      "outputs": [
+        "creative directions",
+        "selection criteria",
+        "prototype plan"
+      ],
+      "boundaries": [
+        "不得侵犯第三方知识产权"
+      ]
+    },
+    {
+      "id": "general-complex-problem",
+      "name": "跨领域复杂问题",
+      "triggers": [
+        "复杂问题",
+        "综合问题",
+        "不知道怎么办",
+        "系统性",
+        "全局"
+      ],
+      "problem_types": [
+        "clarify",
+        "diagnose",
+        "decide",
+        "design",
+        "plan",
+        "govern"
+      ],
+      "required_inputs": [
+        "goal",
+        "context"
+      ],
+      "outputs": [
+        "system boundary",
+        "subproblem map",
+        "routing plan",
+        "review loop"
+      ],
+      "boundaries": [
+        "按子问题分别路由，不能用单一象征解释全部因果"
+      ]
+    }
+  ]
+}

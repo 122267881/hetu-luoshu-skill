@@ -1,0 +1,6 @@
+interface:
+  display_name: "河图洛书"
+  short_description: "河洛知识、通用诊断、决策、执行验证与复盘系统"
+  default_prompt: "Use $hetu-luoshu when the user explicitly requests 河图洛书知识、九宫数理、辨源审计、体用建模，或希望用河洛框架处理真实需求、复杂决策、系统诊断、计划执行、优化复盘与治理。必须读取完整 Skill，先运行通用问题入口与 Trust Gate，不要只依据描述字段。"
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,71 @@
+{
+  "method": "direction-aware weighted score",
+  "scale": "0-10",
+  "ranking": [
+    {
+      "name": "定制服务",
+      "score": 7.3,
+      "contributions": [
+        {
+          "criterion": "客户价值",
+          "direction": "max",
+          "raw_score": 9.0,
+          "normalized_score": 9.0,
+          "weight": 5.0,
+          "contribution": 4.5
+        },
+        {
+          "criterion": "实施成本",
+          "direction": "min",
+          "raw_score": 6.0,
+          "normalized_score": 4.0,
+          "weight": 3.0,
+          "contribution": 1.2
+        },
+        {
+          "criterion": "验证速度",
+          "direction": "max",
+          "raw_score": 8.0,
+          "normalized_score": 8.0,
+          "weight": 2.0,
+          "contribution": 1.6
+        }
+      ]
+    },
+    {
+      "name": "先做SaaS",
+      "score": 4.4,
+      "contributions": [
+        {
+          "criterion": "客户价值",
+          "direction": "max",
+          "raw_score": 7.0,
+          "normalized_score": 7.0,
+          "weight": 5.0,
+          "contribution": 3.5
+        },
+        {
+          "criterion": "实施成本",
+          "direction": "min",
+          "raw_score": 9.0,
+          "normalized_score": 1.0,
+          "weight": 3.0,
+          "contribution": 0.3
+        },
+        {
+          "criterion": "验证速度",
+          "direction": "max",
+          "raw_score": 3.0,
+          "normalized_score": 3.0,
+          "weight": 2.0,
+          "contribution": 0.6
+        }
+      ]
+    }
+  ],
+  "winner": "定制服务",
+  "top_gap": 2.9,
+  "sensitivity_warning": "当前前两名差距不小，但结果仍依赖输入评分；改变关键权重前应重新计算。",
+  "evidence_label": "A",
+  "boundary": "加权模型组织权衡，不证明现实结果；评分与权重必须由事实和责任人复核。"
+}

@@ -1,0 +1,221 @@
+{
+  "framework": "河洛九步现实问题解决引擎",
+  "goal": "把现有AI工作流在30天内做成首个可收费服务",
+  "domain": {
+    "id": "business-strategy",
+    "name": "商业与战略"
+  },
+  "problem_type": {
+    "id": "plan",
+    "name": "行动规划"
+  },
+  "support_level": "supported",
+  "trust_gate": "PASS",
+  "handoff_required": false,
+  "professional_handoffs": [],
+  "nine_step_loop": [
+    {
+      "id": "establish-center",
+      "name": "立极",
+      "purpose": "把一个中心目标、成功标准和非目标固定下来。",
+      "content": {
+        "goal": "把现有AI工作流在30天内做成首个可收费服务",
+        "success_metrics": [
+          "签下1个付费客户",
+          "完成1次标准化交付"
+        ],
+        "non_goals": [
+          "不以建议数量代替现实结果"
+        ]
+      }
+    },
+    {
+      "id": "set-boundary",
+      "name": "定界",
+      "purpose": "确定范围、对象、时间、责任和权限。",
+      "content": {
+        "context": "已有原型，但客户定位和交付标准不清楚",
+        "stakeholders": [
+          "创始人",
+          "客户"
+        ],
+        "constraints": [
+          "预算有限",
+          "不会编程"
+        ],
+        "domain_boundaries": [
+          "不保证商业成功或投资回报"
+        ]
+      }
+    },
+    {
+      "id": "map-body",
+      "name": "定体",
+      "purpose": "识别稳定结构、资源、依赖和不可破坏条件。",
+      "content": {
+        "resources": [
+          "Codex",
+          "已有原型",
+          "两个潜在客户"
+        ],
+        "core_components": [
+          "strategic choices",
+          "tradeoffs",
+          "execution plan",
+          "metrics"
+        ],
+        "invariants": [
+          "不保证商业成功或投资回报"
+        ]
+      }
+    },
+    {
+      "id": "read-situation",
+      "name": "定势",
+      "purpose": "区分已知事实、假设、缺口和当前阶段。",
+      "content": {
+        "known_context": "已有原型，但客户定位和交付标准不清楚",
+        "missing_inputs": [],
+        "assumptions": [],
+        "stage": "行动规划"
+      }
+    },
+    {
+      "id": "balance-tensions",
+      "name": "定衡",
+      "purpose": "识别不能单独优化的对位指标和主要矛盾。",
+      "content": {
+        "tensions": [
+          "速度 vs 质量",
+          "短期验证 vs 长期能力",
+          "收益/价值 vs 成本/风险"
+        ],
+        "decision_anchor": "签下1个付费客户"
+      }
+    },
+    {
+      "id": "choose-strategy",
+      "name": "定策",
+      "purpose": "生成最小可验证策略，而非一次性押注全部资源。",
+      "content": {
+        "problem_question": "谁在何时完成什么，依赖和里程碑是什么？",
+        "recommended_strategy": "先建立最小闭环并取得真实反馈，再扩大投入。",
+        "alternatives": [
+          "维持现状并补证据",
+          "小范围试点",
+          "分阶段全面实施"
+        ]
+      }
+    },
+    {
+      "id": "define-action",
+      "name": "定行",
+      "purpose": "明确下一步、负责人、交付物和检查点。",
+      "content": {
+        "owner": "创始人",
+        "review_owner": "客户",
+        "primary_resource": "Codex",
+        "deliverables": [
+          "strategic choices",
+          "tradeoffs",
+          "execution plan",
+          "metrics"
+        ]
+      }
+    },
+    {
+      "id": "define-verification",
+      "name": "定验",
+      "purpose": "定义基线、指标、证据门槛、失败信号和停止条件。",
+      "content": {
+        "metrics": [
+          "签下1个付费客户",
+          "完成1次标准化交付"
+        ],
+        "baseline": "执行前记录当前状态",
+        "evidence_threshold": "至少一个外部可观察结果",
+        "failure_signals": [
+          "没有真实反馈",
+          "关键约束被破坏",
+          "投入持续增加但指标不改善"
+        ]
+      }
+    },
+    {
+      "id": "adapt-and-learn",
+      "name": "定变",
+      "purpose": "根据反馈继续、调整、回滚、升级或沉淀规则。",
+      "content": {
+        "continue_if": "目标指标改善且边界未被破坏",
+        "adjust_if": "部分指标改善但出现新瓶颈",
+        "rollback_if": "核心指标恶化或安全/成本边界被突破",
+        "learning_asset": "把验证过的成功不变量或失败规则写入案例与测试"
+      }
+    }
+  ],
+  "execution_plan": [
+    {
+      "step": 1,
+      "action": "冻结中心目标、成功标准、范围和非目标",
+      "owner": "创始人",
+      "deliverable": "一页问题定义与完成标准",
+      "checkpoint": "所有关键参与者使用同一目标表述"
+    },
+    {
+      "step": 2,
+      "action": "补齐最高影响的缺失输入并验证关键假设",
+      "owner": "创始人",
+      "deliverable": "事实、假设、证据和未知项清单",
+      "checkpoint": "至少消除一个会改变方案方向的不确定性"
+    },
+    {
+      "step": 3,
+      "action": "用现有资源执行最小闭环试点",
+      "owner": "创始人",
+      "deliverable": "strategic choices",
+      "checkpoint": "获得真实用户、系统或利益相关者反馈"
+    },
+    {
+      "step": 4,
+      "action": "按指标复盘并决定继续、调整、停止或升级",
+      "owner": "客户",
+      "deliverable": "决策记录与下一周期计划",
+      "checkpoint": "决策可追溯到数据、反馈或明确风险边界"
+    }
+  ],
+  "verification": {
+    "baseline": "执行前记录与目标直接相关的当前状态",
+    "metrics": [
+      "签下1个付费客户",
+      "完成1次标准化交付"
+    ],
+    "pass_condition": "至少一个核心指标达到预设结果，且未突破约束和领域边界",
+    "failure_signals": [
+      "指标无改善",
+      "证据无法复现",
+      "成本或风险超过上限",
+      "依赖长期无法满足"
+    ],
+    "review_cadence": "每个里程碑后复盘一次",
+    "independent_review": "客户"
+  },
+  "rollback": {
+    "trigger": "核心指标恶化、边界被突破、关键假设被证伪或继续投入的预期价值为负",
+    "actions": [
+      "停止扩大投入",
+      "恢复上一稳定状态",
+      "保留证据和失败记录",
+      "重新选择更小方案或专业接管"
+    ],
+    "preserve": [
+      "原始数据",
+      "决策记录",
+      "已验证成功不变量",
+      "未解决风险"
+    ]
+  },
+  "assumptions": [],
+  "missing_inputs": [],
+  "evidence_label": "A",
+  "boundary": "该引擎提供结构化分析与执行闭环，不保证解决所有问题，也不替代实时数据、专业判断和现实执行。"
+}

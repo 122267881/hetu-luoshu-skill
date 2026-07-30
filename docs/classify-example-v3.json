@@ -1,0 +1,50 @@
+{
+  "request": "我要把一个AI工具做成能收费的产品，明确客户、功能、价格和上线计划",
+  "domain": {
+    "id": "product-innovation",
+    "name": "产品与创新",
+    "matched_triggers": [
+      "产品",
+      "功能",
+      "收费",
+      "上线计划"
+    ],
+    "score": 4,
+    "required_inputs": [
+      "goal",
+      "users",
+      "constraints"
+    ],
+    "outputs": [
+      "problem statement",
+      "MVP scope",
+      "validation experiment",
+      "roadmap"
+    ],
+    "boundaries": [
+      "不把象数映射当市场证据"
+    ]
+  },
+  "problem_type": {
+    "id": "plan",
+    "name": "行动规划",
+    "matched_triggers": [
+      "计划",
+      "上线"
+    ],
+    "score": 2,
+    "question": "谁在何时完成什么，依赖和里程碑是什么？",
+    "outputs": [
+      "actions",
+      "owners",
+      "milestones",
+      "dependencies"
+    ]
+  },
+  "support_level": "supported",
+  "trust_gate": "PASS",
+  "handoff_required": false,
+  "risk_codes": [],
+  "evidence_label": "A",
+  "classification_note": "领域与问题类型由现代触发词目录路由，不是传统河洛的固定原义。"
+}

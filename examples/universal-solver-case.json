@@ -1,0 +1,10 @@
+{
+  "goal": "把现有AI工作流在30天内做成首个可收费服务",
+  "context": "已有原型，但客户定位和交付标准不清楚",
+  "domain": "business-strategy",
+  "problem_type": "plan",
+  "constraints": ["预算有限", "不会编程"],
+  "resources": ["Codex", "已有原型", "两个潜在客户"],
+  "stakeholders": ["创始人", "客户"],
+  "success_metrics": ["签下1个付费客户", "完成1次标准化交付"]
+}

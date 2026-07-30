@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <rect width="1000" height="1000" fill="#f8f6f0"/>
+  <g font-family="serif" text-anchor="middle" fill="#111">
+    <text x="500" y="70" font-size="42">南 · 2/7 火</text>
+    <text x="500" y="955" font-size="42">北 · 1/6 水</text>
+    <text x="85" y="515" font-size="42" transform="rotate(-90 85 515)">东 · 3/8 木</text>
+    <text x="915" y="515" font-size="42" transform="rotate(90 915 515)">西 · 4/9 金</text>
+    <text x="500" y="515" font-size="42">中 · 5/10 土</text>
+  </g>
+  <g stroke="#111" stroke-width="5">
+    <!-- south: 2 black inside, 7 white outside -->
+    <circle cx="470" cy="250" r="18" fill="#111"/><circle cx="530" cy="250" r="18" fill="#111"/>
+    <g fill="#fff"><circle cx="410" cy="170" r="18"/><circle cx="470" cy="150" r="18"/><circle cx="530" cy="150" r="18"/><circle cx="590" cy="170" r="18"/><circle cx="400" cy="230" r="18"/><circle cx="600" cy="230" r="18"/><circle cx="500" cy="115" r="18"/></g>
+    <!-- north: 1 white inside, 6 black outside -->
+    <circle cx="500" cy="750" r="18" fill="#fff"/>
+    <g fill="#111"><circle cx="420" cy="820" r="18"/><circle cx="480" cy="840" r="18"/><circle cx="540" cy="840" r="18"/><circle cx="600" cy="820" r="18"/><circle cx="440" cy="780" r="18"/><circle cx="560" cy="780" r="18"/></g>
+    <!-- east: 3 white inside, 8 black outside -->
+    <g fill="#fff"><circle cx="250" cy="450" r="18"/><circle cx="250" cy="500" r="18"/><circle cx="250" cy="550" r="18"/></g>
+    <g fill="#111"><circle cx="150" cy="410" r="18"/><circle cx="200" cy="390" r="18"/><circle cx="290" cy="390" r="18"/><circle cx="340" cy="410" r="18"/><circle cx="150" cy="590" r="18"/><circle cx="200" cy="610" r="18"/><circle cx="290" cy="610" r="18"/><circle cx="340" cy="590" r="18"/></g>
+    <!-- west: 4 black inside, 9 white outside -->
+    <g fill="#111"><circle cx="730" cy="460" r="18"/><circle cx="770" cy="460" r="18"/><circle cx="730" cy="540" r="18"/><circle cx="770" cy="540" r="18"/></g>
+    <g fill="#fff"><circle cx="660" cy="390" r="18"/><circle cx="720" cy="370" r="18"/><circle cx="780" cy="370" r="18"/><circle cx="840" cy="390" r="18"/><circle cx="650" cy="500" r="18"/><circle cx="850" cy="500" r="18"/><circle cx="660" cy="610" r="18"/><circle cx="750" cy="630" r="18"/><circle cx="840" cy="610" r="18"/></g>
+    <!-- center: 5 white + 10 black -->
+    <g fill="#fff"><circle cx="450" cy="450" r="15"/><circle cx="550" cy="450" r="15"/><circle cx="500" cy="500" r="15"/><circle cx="450" cy="550" r="15"/><circle cx="550" cy="550" r="15"/></g>
+    <g fill="#111"><circle cx="390" cy="440" r="12"/><circle cx="410" cy="480" r="12"/><circle cx="390" cy="520" r="12"/><circle cx="410" cy="560" r="12"/><circle cx="440" cy="610" r="12"/><circle cx="560" cy="610" r="12"/><circle cx="590" cy="560" r="12"/><circle cx="610" cy="520" r="12"/><circle cx="590" cy="480" r="12"/><circle cx="610" cy="440" r="12"/></g>
+  </g>
+</svg>

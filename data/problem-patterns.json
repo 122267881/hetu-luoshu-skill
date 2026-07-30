@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "skill_version": "3.0.0",
+  "evidence_label": "A",
+  "patterns": [
+    {
+      "id": "clarify",
+      "name": "澄清目标",
+      "triggers": [
+        "不清楚",
+        "是什么",
+        "目标",
+        "方向",
+        "定位",
+        "需求"
+      ],
+      "question": "到底要改变什么，成功是什么样？",
+      "outputs": [
+        "goal",
+        "success criteria",
+        "non-goals"
+      ]
+    },
+    {
+      "id": "diagnose",
+      "name": "诊断结构",
+      "triggers": [
+        "为什么",
+        "原因",
+        "问题",
+        "卡住",
+        "异常",
+        "根因"
+      ],
+      "question": "现象背后的结构、约束和反馈是什么？",
+      "outputs": [
+        "facts",
+        "hypotheses",
+        "root causes",
+        "unknowns"
+      ]
+    },
+    {
+      "id": "decide",
+      "name": "权衡决策",
+      "triggers": [
+        "选择",
+        "决定",
+        "哪个好",
+        "取舍",
+        "优先级"
+      ],
+      "question": "在约束下哪种选择的净价值最高？",
+      "outputs": [
+        "options",
+        "criteria",
+        "tradeoffs",
+        "decision"
+      ]
+    },
+    {
+      "id": "design",
+      "name": "方案设计",
+      "triggers": [
+        "设计",
+        "搭建",
+        "创建",
+        "开发",
+        "方案",
+        "架构"
+      ],
+      "question": "怎样形成最小但完整的可用系统？",
+      "outputs": [
+        "architecture",
+        "components",
+        "interfaces",
+        "validation"
+      ]
+    },
+    {
+      "id": "plan",
+      "name": "行动规划",
+      "triggers": [
+        "计划",
+        "步骤",
+        "路线图",
+        "怎么做",
+        "实施",
+        "上线"
+      ],
+      "question": "谁在何时完成什么，依赖和里程碑是什么？",
+      "outputs": [
+        "actions",
+        "owners",
+        "milestones",
+        "dependencies"
+      ]
+    },
+    {
+      "id": "execute",
+      "name": "执行推进",
+      "triggers": [
+        "执行",
+        "开始做",
+        "落地",
+        "推进",
+        "完成"
+      ],
+      "question": "当前下一步是什么，怎样减少阻塞？",
+      "outputs": [
+        "next actions",
+        "checkpoints",
+        "blockers"
+      ]
+    },
+    {
+      "id": "optimize",
+      "name": "优化改进",
+      "triggers": [
+        "优化",
+        "升级",
+        "提高",
+        "更好",
+        "迭代"
+      ],
+      "question": "哪个杠杆最能改善目标指标且不破坏约束？",
+      "outputs": [
+        "baseline",
+        "levers",
+        "experiment",
+        "comparison"
+      ]
+    },
+    {
+      "id": "recover",
+      "name": "恢复止损",
+      "triggers": [
+        "恢复",
+        "修复",
+        "回滚",
+        "失败",
+        "危机",
+        "故障"
+      ],
+      "question": "如何先止损恢复，再定位根因？",
+      "outputs": [
+        "containment",
+        "recovery",
+        "root cause",
+        "prevention"
+      ]
+    },
+    {
+      "id": "learn",
+      "name": "复盘学习",
+      "triggers": [
+        "复盘",
+        "总结",
+        "学习",
+        "经验",
+        "反馈"
+      ],
+      "question": "哪些经验应沉淀为可复用规则？",
+      "outputs": [
+        "evidence",
+        "invariants",
+        "failures",
+        "durable update"
+      ]
+    },
+    {
+      "id": "govern",
+      "name": "治理控制",
+      "triggers": [
+        "治理",
+        "监督",
+        "规则",
+        "权限",
+        "审计",
+        "风险"
+      ],
+      "question": "谁有权做什么，如何监控、升级和问责？",
+      "outputs": [
+        "authority",
+        "controls",
+        "monitoring",
+        "escalation"
+      ]
+    }
+  ]
+}
