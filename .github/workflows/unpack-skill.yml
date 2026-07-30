@@ -19,11 +19,11 @@ jobs:
         run: |
           set -euo pipefail
           test -f .skill-bundle/READY
-          cat .skill-bundle/chunk-* | base64 --decode > /tmp/hetu-luoshu-skill.zip
-          echo "d6a056778985156dffa8f22a69fe73584704b258209b7171ce6691a03c6f397f  /tmp/hetu-luoshu-skill.zip" | sha256sum --check --strict
+          cat .skill-bundle/chunk-* | base64 --decode > /tmp/hetu-luoshu-skill.tar.xz
+          echo "8a4214e780120df2ebe9f619565582b525c5f99285a63e96e7780261cea0e9dc  /tmp/hetu-luoshu-skill.tar.xz" | sha256sum --check --strict
           rm -rf /tmp/hetu-luoshu-unpacked
           mkdir -p /tmp/hetu-luoshu-unpacked
-          unzip -q /tmp/hetu-luoshu-skill.zip -d /tmp/hetu-luoshu-unpacked
+          tar -xJf /tmp/hetu-luoshu-skill.tar.xz -C /tmp/hetu-luoshu-unpacked
           source_dir="$(find /tmp/hetu-luoshu-unpacked -mindepth 1 -maxdepth 1 -type d | head -n 1)"
           test -n "$source_dir"
           cp -a "$source_dir"/. ./
