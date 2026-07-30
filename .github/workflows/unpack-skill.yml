@@ -14,12 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Decode and unpack skill
+      - name: Decode, verify and unpack skill
         shell: bash
         run: |
           set -euo pipefail
           test -f .skill-bundle/READY
-          cat .skill-bundle/part-* | base64 --decode > /tmp/hetu-luoshu-skill.zip
+          cat .skill-bundle/chunk-* | base64 --decode > /tmp/hetu-luoshu-skill.zip
+          echo "d6a056778985156dffa8f22a69fe73584704b258209b7171ce6691a03c6f397f  /tmp/hetu-luoshu-skill.zip" | sha256sum --check --strict
           rm -rf /tmp/hetu-luoshu-unpacked
           mkdir -p /tmp/hetu-luoshu-unpacked
           unzip -q /tmp/hetu-luoshu-skill.zip -d /tmp/hetu-luoshu-unpacked
